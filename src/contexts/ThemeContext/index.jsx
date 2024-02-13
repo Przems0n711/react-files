@@ -1,6 +1,6 @@
-import { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext } from 'react';
 
-const ThemeContext = React.createContext();
+const ThemeContext = createContext();
 
 export const useTheme = () => {
   return useContext(ThemeContext);
@@ -15,11 +15,9 @@ const ThemeProvider = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {props.children}
+      {children}
     </ThemeContext.Provider>
   );
 };
 
-export const ThemeProvider;
-
-export default ThemeContext;
+export default ThemeProvider;

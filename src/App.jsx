@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import './App.scss';
+import { ThemeContext } from '/home/Przems0n711/react-files/src/contexts/ThemeContext/index.jsx';
 import AppHeader from './components/AppHeader';
 
 function App() {
